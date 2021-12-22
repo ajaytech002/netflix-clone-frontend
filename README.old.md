@@ -1,55 +1,70 @@
-# Table of Contents
+# Getting Started with Create React App
 
-- [Setup](#setup)
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Setup
+## Available Scripts
 
-This is the frontend of the Netflix Clone frontend, deveoped using React. This app was created using `create-react-app` and `react-router-dom`.
+In the project directory, you can run:
 
-1. [Install git](https://git-scm.com/downloads).
-2. [Install visual studio code](https://code.visualstudio.com/)
-3. Create a new project in github.
+### `npm start`
 
-   Use the same name as the react project which we will be creating using the `create-react-app` script. Don't create a README.md file. Just create a .gitignore and a LICENSE if necessary.
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-   After the projet has been created in github, get the git clone url. For example, in our case it will be `https://github.com/ajaytech002/netflix-clone-frontend.git`.
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-4. Clone the project into your computer.
+### `npm test`
 
-   ```bash
-   git clone https://github.com/ajaytech002/netflix-clone-frontend.git
-   ```
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-5. Create the react app using the following command:
+### `npm run build`
 
-   ```bash
-   npx create-react-app netflix-clone-frontend
-   ```
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-   Run this command inside the same directory that you used to run the previous command. Do NOT enter into the directory which was created when you cloned the repository.
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-   A new README.md will be created by the `create-react-script`. This will contain the instructions to run the react app using the `npm start` command.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-6. Remove unnecessary files:
+### `npm run eject`
 
-   We will have to do a little bit of a clean-up to remove unwanted files for now. This is to ensure that the setup directory stays clean and you will not be confused with unnecessary files.
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-   Remove the following files inside the src directory. Do NOT delete the entire `src` directory.
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-   ```bash
-   📁 src
-   Ⳑ 🗎 App.test.js
-   Ⳑ 🗎 logo.svg
-   Ⳑ 🗎 reportWebVitals.js
-   Ⳑ 🗎 setupTests.js
-   ```
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-7. Run the following command to start the react app:
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-   ```bash
-   npm start
-   ```
+## Learn More
 
-   Your default browser should open and you should be able to see the app.
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-   ![Beginner App](/docs/images/react-app-start.png)
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
