@@ -34,12 +34,12 @@ npx create-react-app netflix-clone-frontend
 
    We will have to do a little bit of a clean-up to remove unwanted files for now. This is to ensure that the setup directory stays clean and you will not be confused with unnecessary files.
 
-```bash
-📁 src
- Ⳑ 🗎 App.test.js
- Ⳑ 🗎 logo.svg
- Ⳑ 🗎 reportWebVitals.js
- Ⳑ 🗎 setupTests.js
-```
+   ```bash
+   📁 src
+   Ⳑ 🗎 App.test.js
+   Ⳑ 🗎 logo.svg
+   Ⳑ 🗎 reportWebVitals.js
+   Ⳑ 🗎 setupTests.js
+   ```
 
 6.
