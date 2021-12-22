@@ -16,21 +16,21 @@ This is the frontend of the Netflix Clone frontend, deveoped using React. This a
 
 4. Clone the project into your computer.
 
-```bash
-git clone https://github.com/ajaytech002/netflix-clone-frontend.git
-```
+   ```bash
+   git clone https://github.com/ajaytech002/netflix-clone-frontend.git
+   ```
 
-4.  Create the react app using the following command:
+5. Create the react app using the following command:
 
-```bash
-npx create-react-app netflix-clone-frontend
-```
+   ```bash
+   npx create-react-app netflix-clone-frontend
+   ```
 
-    Run this command inside the same directory that you used to run the previous command. Do NOT enter into the directory which was created when you cloned the repository.
+   Run this command inside the same directory that you used to run the previous command. Do NOT enter into the directory which was created when you cloned the repository.
 
-    A new README.md will be created by the `create-react-script`. This will contain the instructions to run the react app using the `npm start` command.
+   A new README.md will be created by the `create-react-script`. This will contain the instructions to run the react app using the `npm start` command.
 
-5. Remove the following files:
+6. Remove the following files:
 
    We will have to do a little bit of a clean-up to remove unwanted files for now. This is to ensure that the setup directory stays clean and you will not be confused with unnecessary files.
 
@@ -42,4 +42,4 @@ npx create-react-app netflix-clone-frontend
    Ⳑ 🗎 setupTests.js
    ```
 
-6.
+7.
