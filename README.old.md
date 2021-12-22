@@ -30,9 +30,11 @@ This is the frontend of the Netflix Clone frontend, deveoped using React. This a
 
    A new README.md will be created by the `create-react-script`. This will contain the instructions to run the react app using the `npm start` command.
 
-6. Remove the following files:
+6. Remove unnecessary files:
 
    We will have to do a little bit of a clean-up to remove unwanted files for now. This is to ensure that the setup directory stays clean and you will not be confused with unnecessary files.
+
+   Remove the following files inside the src directory. Do NOT delete the entire `src` directory.
 
    ```bash
    📁 src
@@ -42,4 +44,12 @@ This is the frontend of the Netflix Clone frontend, deveoped using React. This a
    Ⳑ 🗎 setupTests.js
    ```
 
-7.
+7. Run the following command to start the react app:
+
+   ```bash
+   npm start
+   ```
+
+   Your default browser should open and you should be able to see the app.
+
+   ![Beginner App](/docs/images/react-app-start.png)
