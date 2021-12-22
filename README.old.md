@@ -10,11 +10,11 @@ This is the frontend of the Netflix Clone frontend, deveoped using React. This a
 2. [Install visual studio code](https://code.visualstudio.com/)
 3. Create a new project in github.
 
-Use the same name as the react project which we will be creating using the `create-react-app` script. Don't create a README.md file. Just create a .gitignore and a LICENSE if necessary.
+   Use the same name as the react project which we will be creating using the `create-react-app` script. Don't create a README.md file. Just create a .gitignore and a LICENSE if necessary.
 
-After the projet has been created in github, get the git clone url. For example, in our case it will be `https://github.com/ajaytech002/netflix-clone-frontend.git`.
+   After the projet has been created in github, get the git clone url. For example, in our case it will be `https://github.com/ajaytech002/netflix-clone-frontend.git`.
 
-3. Clone the project into your computer.
+4. Clone the project into your computer.
 
 ```bash
 git clone https://github.com/ajaytech002/netflix-clone-frontend.git
