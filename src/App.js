@@ -1,23 +1,104 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Box, Flex } from "@chakra-ui/react";
+import React, { Component, useState, useEffect } from "react";
+import Scroller from "./components/scroller";
+import Header from "./components/Header";
+import Banner from "./components/Banner";
+import Footer from "./components/Footer";
+import axios from "axios";
+
+const API_URL = `http://localhost:3001`;
+const CONTINUE_WATCHING_FOR_USER = `continue-watching-for-user`;
 
 function App() {
+  const [continueWatchingForUser, setContinueWatchingForUser] = useState([]);
+  const [trendingNow, setTrendingNow] = useState([]);
+  const [casualViewing, setCasualViewing] = useState([]);
+  const [thrillerMovies, setThrillerMovies] = useState([]);
+  const [usMovies, setUsMovies] = useState([]);
+
+  useEffect(async () => {
+    try {
+      const continueWatchingForUserResults = await axios.get(
+        `${API_URL}/${CONTINUE_WATCHING_FOR_USER}`
+      );
+      let movies = continueWatchingForUserResults.data.movies;
+      movies = movies.map((movie) => {
+        return {
+          id: movie.movieId,
+          image: movie.movieImage,
+          imageBg: movie.movieImage,
+          title: movie.movieName,
+        };
+      });
+      setContinueWatchingForUser(movies);
+
+      const trendingNowResults = await axios.get(`${API_URL}/trending-now`);
+      movies = trendingNowResults.data.movies;
+      movies = movies.map((movie) => {
+        return {
+          id: movie.movieId,
+          image: movie.movieImage,
+          imageBg: movie.movieImage,
+          title: movie.movieName,
+        };
+      });
+      setTrendingNow(movies);
+
+      const casualViewingResults = await axios.get(`${API_URL}/casual-viewing`);
+      movies = casualViewingResults.data.movies;
+      movies = movies.map((movie) => {
+        return {
+          id: movie.movieId,
+          image: movie.movieImage,
+          imageBg: movie.movieImage,
+          title: movie.movieName,
+        };
+      });
+      setCasualViewing(movies);
+
+      const thrillerMoviesResults = await axios.get(
+        `${API_URL}/thriller-movies`
+      );
+      movies = thrillerMoviesResults.data.movies;
+      movies = movies.map((movie) => {
+        return {
+          id: movie.movieId,
+          image: movie.movieImage,
+          imageBg: movie.movieImage,
+          title: movie.movieName,
+        };
+      });
+      setThrillerMovies(movies);
+
+      const usMoviesResults = await axios.get(`${API_URL}/us-movies`);
+      movies = usMoviesResults.data.movies;
+      movies = movies.map((movie) => {
+        return {
+          id: movie.movieId,
+          image: movie.movieImage,
+          imageBg: movie.movieImage,
+          title: movie.movieName,
+        };
+      });
+      setUsMovies(movies);
+    } catch (err) {
+      console.log(err);
+    }
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="wrapper">
+      <Header></Header>
+      <Banner> </Banner>
+      <Scroller
+        items={continueWatchingForUser}
+        title="Continue Watching for user"
+      />
+      <Scroller items={trendingNow} title="Trending Now" />
+      <Scroller items={casualViewing} title="Casual Viewing" />
+      <Scroller items={thrillerMovies} title="Thriller Movies" />
+      <Scroller items={usMovies} title="US Movies" />
+      <Footer />
     </div>
   );
 }
