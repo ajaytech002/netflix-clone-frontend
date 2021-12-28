@@ -101,3 +101,13 @@ To view more elements in the scroller, just use the right and left navigation bu
 ## Mock API
 
 To make things easy, we will first start to use the Mock API provided by a website called.
+
+## Deploy
+
+### Vercel
+
+Create React Apps can be directly deployed to vercel. However, there is a small change we need to do. During the deployment, in the build-command, change it as follows. You will have to switch on the `OVERRIDE` option.
+
+```bash
+CI= npm run build
+```
