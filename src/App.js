@@ -22,8 +22,9 @@ function App() {
       const continueWatchingForUserResults = await axios.get(
         `${API_URL}/${CONTINUE_WATCHING_FOR_USER}`
       );
-      let movies = continueWatchingForUserResults.data.movies;
-      movies = movies.map((movie) => {
+      let movies = continueWatchingForUserResults?.data?.movies;
+      console.log("movies = ", movies);
+      movies = movies?.map((movie) => {
         return {
           id: movie.movieId,
           image: movie.movieImage,
@@ -35,8 +36,8 @@ function App() {
       setContinueWatchingForUser(movies);
 
       const trendingNowResults = await axios.get(`${API_URL}/trending-now`);
-      movies = trendingNowResults.data.movies;
-      movies = movies.map((movie) => {
+      movies = trendingNowResults?.data?.movies;
+      movies = movies?.map((movie) => {
         return {
           id: movie.movieId,
           image: movie.movieImage,
@@ -47,8 +48,8 @@ function App() {
       setTrendingNow(movies);
 
       const casualViewingResults = await axios.get(`${API_URL}/casual-viewing`);
-      movies = casualViewingResults.data.movies;
-      movies = movies.map((movie) => {
+      movies = casualViewingResults?.data?.movies;
+      movies = movies?.map((movie) => {
         return {
           id: movie.movieId,
           image: movie.movieImage,
@@ -61,8 +62,8 @@ function App() {
       const thrillerMoviesResults = await axios.get(
         `${API_URL}/thriller-movies`
       );
-      movies = thrillerMoviesResults.data.movies;
-      movies = movies.map((movie) => {
+      movies = thrillerMoviesResults?.data?.movies;
+      movies = movies?.map((movie) => {
         return {
           id: movie.movieId,
           image: movie.movieImage,
@@ -73,8 +74,8 @@ function App() {
       setThrillerMovies(movies);
 
       const usMoviesResults = await axios.get(`${API_URL}/us-movies`);
-      movies = usMoviesResults.data.movies;
-      movies = movies.map((movie) => {
+      movies = usMoviesResults?.data?.movies;
+      movies = movies?.map((movie) => {
         return {
           id: movie.movieId,
           image: movie.movieImage,
