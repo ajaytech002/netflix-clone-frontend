@@ -7,7 +7,7 @@ import Banner from "./components/Banner";
 import Footer from "./components/Footer";
 import axios from "axios";
 
-const API_URL = `http://localhost:3001`;
+const API_URL = process.env.REACT_APP_API_URL;
 const CONTINUE_WATCHING_FOR_USER = `continue-watching-for-user`;
 
 function App() {
@@ -29,6 +29,7 @@ function App() {
           image: movie.movieImage,
           imageBg: movie.movieImage,
           title: movie.movieName,
+          url: movie.movieUrl,
         };
       });
       setContinueWatchingForUser(movies);
@@ -94,10 +95,18 @@ function App() {
         items={continueWatchingForUser}
         title="Continue Watching for user"
       />
-      <Scroller items={trendingNow} title="Trending Now" />
-      <Scroller items={casualViewing} title="Casual Viewing" />
-      <Scroller items={thrillerMovies} title="Thriller Movies" />
-      <Scroller items={usMovies} title="US Movies" />
+      <Scroller items={trendingNow} prefix="trendingNow" title="Trending Now" />
+      <Scroller
+        items={casualViewing}
+        prefix="casualViewing"
+        title="Casual Viewing"
+      />
+      <Scroller
+        items={thrillerMovies}
+        prefix="thrillerMovies"
+        title="Thriller Movies"
+      />
+      <Scroller items={usMovies} prefix="usMovies" title="US Movies" />
       <Footer />
     </div>
   );
